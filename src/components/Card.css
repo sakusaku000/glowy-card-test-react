@@ -1,0 +1,22 @@
+.card {
+    position:relative;
+    background-color:#424242;
+    aspect-ratio:1/1;
+    border-radius:10px;
+    border:1px solid #6d6d6d;
+    overflow:hidden;
+    box-shadow:0px 5px 10px #00000031;
+    padding:20px;
+}
+.card::before {
+    content:"";
+    position:absolute;
+    inset:0px;
+    background-image:radial-gradient(circle at var(--mouse-x) var(--mouse-y), #FFFFFF50, transparent);
+    opacity:0;
+    transition: opacity 200ms;
+    z-index:1;
+}
+.card:hover::before {
+    opacity:1;
+}
